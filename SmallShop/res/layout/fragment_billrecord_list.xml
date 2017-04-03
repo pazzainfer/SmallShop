@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/main_background" >
+	<RelativeLayout
+        android:id="@+id/billrecord_list_top"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:background="@drawable/top_background"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp" >
+
+        <Button
+            android:id="@+id/billrecord_list_search_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="30dip"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:background="@drawable/search_btn_background"
+            android:gravity="center"
+            android:text="@string/search_btn"
+            android:textSize="12sp"
+            android:textStyle="bold" />
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@id/billrecord_list_search_btn"
+            android:gravity="center_vertical" >
+
+            <EditText
+                android:id="@+id/billrecord_list_search_text"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="10dp"
+                android:background="@drawable/search_frame"
+                android:hint="@string/search_text_hint"
+                android:imeOptions="actionSearch"
+                android:paddingLeft="32dp"
+                android:singleLine="true"
+                android:textSize="12sp" />
+        </RelativeLayout>
+    </RelativeLayout>
+    <com.leven.app.shop.swipemenu.SwipeMenuListView
+        android:id="@+id/billrecord_list"
+        android:layout_below="@id/billrecord_list_top"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:cacheColorHint="#00000000"
+        android:divider="@drawable/list_separator_line"
+        android:scrollbars="none" />
+    <!-- Here is the view to show if the list is emtpy -->
+
+    <ScrollView
+        android:id="@+id/billrecord_list_empty"
+        android:layout_width="fill_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true" >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/billrecord_list_empty_text"
+                android:layout_width="fill_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:lineSpacingMultiplier="0.92"
+                android:paddingLeft="10dip"
+                android:paddingRight="10dip"
+                android:paddingTop="10dip"
+                android:text="@string/billrecord_list_empty_text"
+                android:textColor="?android:attr/textColorSecondary"
+                android:textSize="20sp" />
+        </LinearLayout>
+    </ScrollView>
+
+</RelativeLayout>

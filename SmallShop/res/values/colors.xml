@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item type="drawable" name="main_background">#ffe7e7e7</item>
+    <item type="color" name="white">#ffffffff</item>
+
+    <color name="transparent">#0000</color>
+    <color name="fragment_tab_off">#8d8d8d</color>
+    
+    <color name="menu_bg_red">#f94125</color>
+    <color name="menu_bg_green">#2ecc71</color>
+    <color name="menu_bg_blue">#3c78d8</color>
+</resources>

@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/rl_show_address"
+    android:layout_width="match_parent"
+    android:layout_height="70dip"
+    >
+
+    <ImageView
+        android:id="@+id/custom_pref_arrow"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:gravity="center_vertical"
+        android:src="@drawable/item_arrow_right" />
+
+    <TextView
+        android:id="@+id/custom_pref_title"
+        android:layout_toLeftOf="@id/custom_pref_arrow"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:drawablePadding="10.0dip"
+        android:gravity="center_vertical"
+        android:includeFontPadding="false"
+        android:paddingLeft="10.0dip"
+        android:layout_marginTop="10.0dip"
+        android:text="浏览记录"
+        android:textColor="#ff333333"
+        android:textSize="20.0sp" />
+
+    <TextView
+        android:id="@+id/custom_pref_summary"
+        android:layout_toLeftOf="@id/custom_pref_arrow"
+        android:layout_below="@id/custom_pref_title"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:drawablePadding="10.0dip"
+        android:layout_marginTop="5.0dip"
+        android:gravity="center_vertical"
+        android:includeFontPadding="false"
+        android:paddingLeft="10.0dip"
+        android:text="浏览记录"
+        android:textColor="#ff777777"
+        android:textSize="16.0sp" />
+</RelativeLayout>

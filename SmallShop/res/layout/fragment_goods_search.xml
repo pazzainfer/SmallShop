@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/main_background">
+    
+    <RelativeLayout android:id="@+id/search_top"
+    	android:layout_width="fill_parent"
+    	android:layout_alignParentTop="true"
+    	android:paddingLeft="10dp"
+    	android:paddingRight="10dp"
+    	android:background="@drawable/top_background"
+    	android:layout_height="wrap_content">
+    	
+        <Button android:id="@+id/search_btn_search"
+        	android:layout_width="wrap_content"
+        	android:layout_height="30dip"
+        	android:gravity="center"
+        	android:layout_centerVertical="true"
+        	android:layout_alignParentRight="true"
+        	android:textSize="12sp"
+        	android:textStyle="bold"
+        	android:background="@drawable/search_btn_background"
+        	android:text="@string/search_btn"/>
+        
+        <RelativeLayout android:id="@+id/search_delete"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+        	android:layout_centerVertical="true"
+			android:gravity="center_vertical"
+            android:layout_toLeftOf="@id/search_btn_search">
+            
+		    	<EditText android:id="@+id/search_text"
+		        	android:layout_width="fill_parent"
+		        	android:layout_height="wrap_content"
+					android:singleLine="true"
+		        	android:background="@drawable/search_frame"
+		        	android:layout_marginRight="10dp"
+		        	android:paddingLeft="32dp"
+		        	android:textSize="12sp"
+		        	android:imeOptions="actionSearch"
+		        	android:hint="@string/search_text_hint"/>
+		    	
+		    	<ImageView android:id="@+id/search_btn_camera"
+		    	    android:layout_width="wrap_content"
+		    	    android:layout_height="wrap_content"
+		    	    android:layout_alignParentRight="true"
+		    	    android:src="@drawable/camera"
+		    	    android:layout_centerInParent="true"
+		    	    android:paddingRight="20dp"
+		    	    />
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <com.leven.app.shop.swipemenu.SwipeMenuListView
+        android:id="@+id/search_goods_list"
+        android:layout_width="fill_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/search_top"
+        android:cacheColorHint="#00000000"
+	    android:divider="@drawable/list_separator_line"
+        android:scrollbars="none" />
+
+    <!-- Here is the view to show if the list is emtpy -->  
+    <ScrollView android:id="@+id/search_goods_list_empty"  
+        android:layout_width="fill_parent"  
+        android:layout_height="fill_parent"  
+        android:fillViewport="true"
+        android:layout_below="@+id/search_top">  
+  
+        <LinearLayout  
+            android:layout_width="fill_parent"  
+            android:layout_height="wrap_content"  
+            android:orientation="vertical">  
+  
+            <TextView
+                android:id="@+id/search_goods_list_empty_text"
+                android:layout_width="fill_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:lineSpacingMultiplier="0.92"
+                android:paddingLeft="10dip"
+                android:paddingRight="10dip"
+                android:paddingTop="10dip"
+                android:text="@string/search_goods_list_empty_text"
+                android:textColor="?android:attr/textColorSecondary"
+                android:textSize="20sp" />
+  
+        </LinearLayout>  
+    </ScrollView>
+</RelativeLayout>

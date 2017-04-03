@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	<!--
+	key *************** 偏好Key值
+    title ************* 偏好标题
+    summary *********** 偏好简介
+    defaultValue ****** 默认值
+    type ************** 偏好类型（0:text，1:list）
+    inputType ********* 偏好文本数据类型(stringType:0;doubleType:1;intType:2;dateType:3;datetimeType:4)
+    listEntries ******* 偏好List选项值 
+    background ******** 控件背景色 
+	 -->
+    <declare-styleable name="CustomPrefView">
+        <attr name="type" format="enum">
+            <enum name="text" value="0" />
+            <enum name="list" value="1" />
+        </attr>
+        <attr name="key" format="string" />
+        <attr name="title" format="string" />
+        <attr name="summary" format="string" />
+        <attr name="defaultValue" format="string" />
+        <attr name="listEntries" format="reference"/>
+        <attr name="background" format="reference"/>
+        <attr name="inputType" format="enum">
+            <enum name="stringType" value="0" />
+            <enum name="doubleType" value="1" />
+            <enum name="intType" value="2" />
+            <enum name="dateType" value="3" />
+            <enum name="datetimeType" value="4" />
+        </attr>
+    </declare-styleable>
+
+</resources>

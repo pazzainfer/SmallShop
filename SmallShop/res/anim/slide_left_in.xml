@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<set xmlns:android="http://schemas.android.com/apk/res/android" >
+    <!-- 
+    translate 位置转移动画效果
+
+	android:fromXDelta="0"  从0坐标开始开始
+	android:toXDelta="-100%p"  移动距离到父层的-100%
+	
+	两个参数都是指控件相对于parent的偏移距离
+	
+	android:duration="200"  持续时间
+     -->
+    <translate
+        android:duration="200"
+        android:fromXDelta="-100.0%p"
+        android:toXDelta="0.0" />
+</set>

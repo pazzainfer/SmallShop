@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#ffefebe7" >
+	<RelativeLayout  
+        android:id="@+id/about_top_relative"  
+        android:layout_width="fill_parent"  
+        android:background="#106184"  
+        android:layout_height="50.0dip" >  
+        <ImageView  
+            android:layout_width="wrap_content"  
+            android:layout_height="wrap_content"  
+            android:layout_centerInParent="true"  
+            android:padding="10.0dip"
+            android:src="@drawable/about_title"
+            />  
+    </RelativeLayout>
+    <!-- 用来垂直滚动视图，用于设置项较多的情形。如果设置项不多，那么就不需要了。 -->
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/about_top_relative" 
+        android:fadingEdge="none" >
+        <!-- <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10.0dip"
+                android:layout_marginTop="10.0dip"
+                android:gravity="center_vertical"
+                android:paddingLeft="4.0dip"
+                android:text="我的设置"
+                android:textColor="#ff888888"
+                android:textSize="16.0sp" /> -->
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="vertical"
+            android:paddingBottom="60.0dip"
+            android:paddingLeft="10.0dip"
+            android:paddingRight="10.0dip"
+            android:paddingTop="10.0dip" >
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content" >
+
+                <TableLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="1.0dip"
+                    android:stretchColumns="0"
+                    >
+
+                    <TableRow
+                        android:id="@+id/about_share_item"
+                        android:layout_width="fill_parent"
+                        android:layout_marginLeft="2.0dip"
+                        android:layout_marginRight="2.0dip"
+                        android:background="@drawable/item_corner_top_bg_selector"
+                        android:clickable="true"
+                        android:paddingBottom="16.0dip"
+                        android:paddingTop="16.0dip" >
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="fill_parent"
+                            android:drawableLeft="@drawable/about_share"
+                            android:drawablePadding="10.0dip"
+                            android:gravity="center_vertical"
+                            android:layout_gravity="left"
+                            android:includeFontPadding="false"
+                            android:paddingLeft="17.0dip"
+                            android:text="@string/about_item_share_title"
+                            android:textColor="#ff333333"
+                            android:textSize="16.0sp" />
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="fill_parent"
+                            android:layout_gravity="end"
+                            android:gravity="center_vertical"
+                            android:paddingRight="20.0dip"
+                            android:src="@drawable/item_arrow_right" />
+                    </TableRow>
+
+                    <TableRow
+                        android:id="@+id/about_feedback_item"
+                        android:layout_width="fill_parent"
+                        android:layout_marginLeft="2.0dip"
+                        android:layout_marginRight="2.0dip"
+                        android:background="@drawable/item_corner_middle_bg_selector"
+                        android:clickable="true"
+                        android:paddingBottom="16.0dip"
+                        android:paddingTop="16.0dip"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="fill_parent"
+                            android:drawableLeft="@drawable/about_feedback"
+                            android:drawablePadding="10.0dip"
+                            android:gravity="center_vertical"
+                            android:layout_gravity="left"
+                            android:includeFontPadding="false"
+                            android:paddingLeft="17.0dip"
+                            android:text="@string/about_item_feedback_title"
+                            android:textColor="#ff333333"
+                            android:textSize="16.0sp" />
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="fill_parent"
+                            android:layout_gravity="right"
+                            android:gravity="center_vertical"
+                            android:paddingRight="20.0dip"
+                            android:src="@drawable/item_arrow_right" />
+                    </TableRow>
+
+                    <TableRow
+                        android:id="@+id/about_version_item"
+                        android:layout_width="fill_parent"
+                        android:layout_marginLeft="2.0dip"
+                        android:layout_marginRight="2.0dip"
+                        android:background="@drawable/item_corner_middle_bg_selector"
+                        android:clickable="true"
+                        android:paddingBottom="16.0dip"
+                        android:paddingTop="16.0dip" >
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="fill_parent"
+                            android:drawableLeft="@drawable/about_version"
+                            android:drawablePadding="10.0dip"
+                            android:gravity="center_vertical"
+                            android:layout_gravity="left"
+                            android:includeFontPadding="false"
+                            android:paddingLeft="17.0dip"
+                            android:text="@string/about_item_version_title"
+                            android:textColor="#ff333333"
+                            android:textSize="16.0sp" />
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="fill_parent"
+                            android:layout_gravity="right"
+                            android:gravity="center_vertical"
+                            android:paddingRight="20.0dip"
+                            android:src="@drawable/item_arrow_right" />
+                    </TableRow>
+
+                    <TableRow
+                        android:id="@+id/about_me_item"
+                        android:layout_width="fill_parent"
+                        android:layout_marginLeft="2.0dip"
+                        android:layout_marginRight="2.0dip"
+                        android:background="@drawable/item_corner_bottom_bg_selector"
+                        android:clickable="true"
+                        android:paddingBottom="16.0dip"
+                        android:paddingTop="16.0dip" >
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="fill_parent"
+                            android:drawableLeft="@drawable/about_me"
+                            android:drawablePadding="10.0dip"
+                            android:gravity="center_vertical"
+                            android:layout_gravity="left"
+                            android:includeFontPadding="false"
+                            android:paddingLeft="17.0dip"
+                            android:text="@string/about_item_aboutme_title"
+                            android:textColor="#ff333333"
+                            android:textSize="16.0sp" />
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="fill_parent"
+                            android:layout_gravity="right"
+                            android:gravity="center_vertical"
+                            android:paddingRight="20.0dip"
+                            android:src="@drawable/item_arrow_right" />
+                    </TableRow>
+                </TableLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+</RelativeLayout>

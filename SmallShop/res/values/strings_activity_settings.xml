@@ -1,0 +1,26 @@
+<resources>
+
+    <string name="title_activity_settings">设置</string>
+
+
+    <string name="pref_header_general">通用</string>
+    <string name="pref_header_overdue">商品过期日期提醒</string>
+    <string name="pref_header_cancelbillstate">账单结清取消时间</string>
+    <string name="pref_header_data_sync">数据传输</string>
+    <string name="pref_title_page_size">列表每页显示数</string>
+    <string name="pref_summary_page_size">请按照喜好设定每页显示数</string>
+    <string name="pref_title_overdue_num">提醒判定时间数</string>
+    <string name="pref_summary_overdue_num">请输入提醒判定时间数</string>
+    <string name="pref_title_overdue_unit">提醒判定时间单位</string>
+    <string name="pref_summary_overdue_unit">请选择提醒判定时间单位</string>
+    <string name="pref_title_cancelbillstate">结清取消时间区间(天)</string>
+    <string name="pref_summary_cancelbillstate">请输入结清取消时间区间</string>
+
+
+    <!-- Example settings for Data & Sync -->
+    <string name="pref_title_data_sync_in">数据导入</string>
+    <string name="pref_sync_in_start_receive">开始接收</string>
+    <string name="pref_title_data_sync_out">数据导出</string>
+    <string name="pref_sync_out_start_send">开始发送</string>
+
+</resources>
